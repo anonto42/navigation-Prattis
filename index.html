@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Navbar With BootStrap5</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        height: 80px;
+        width: 100%;
+        background-color: aquamarine;
+    }
+    nav .logo{
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+         line-height: 80px;
+         padding: 0 20px;
+    }
+    nav ul{
+        float: right;
+        list-style: none;
+    }
+    nav ul li{
+        display: inline;
+        margin: 0 30px;
+        line-height: 80px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    #ONOF{
+        display: none;
+    }
+    nav .ber{
+        font-size: 30px;
+        float: right;
+        color: rgb(0, 0, 0);
+        line-height: 80px;
+        margin-right: 20px;
+        cursor: pointer;
+        display: none;
+    }
+    @media(max-width:800px){
+        nav .ber{
+            display: block;
+        }
+        nav ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(40, 40, 183);
+            right: -100%;
+            transition: all .5s;
+        }
+        nav ul li {
+            display: block;
+            line-height: 50px;
+            margin: 40px 0;
+        }
+        #ONOF:checked ~ ul {
+            right: 0;
+        }
+    }
+</style>
+<body>
+    <nav>
+        <input type="checkbox" id="ONOF">
+        <label for="ONOF" class="ber">
+            <i class="fa-solid fa-bars" id="bar"></i>  
+        </label>
+        <a class="logo">logo</a>
+        <ul>
+            <li>about</li>
+            <li>contact</li>
+            <li>projects</li>
+        </ul>
+    </nav>
+    <script>
+    </script>
+</body>
+</html>
